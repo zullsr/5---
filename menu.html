@@ -92,4 +92,103 @@
       font-size: 0.88rem;
       font-weight: 600;
     }
-    .card p { margin: 0; font-size:
+    .card p { margin: 0; font-size: 0.92rem; }
+    .meta { color: var(--sub); font-size: 0.83rem !important; }
+
+    .empty { color: var(--sub); text-align: center; padding: 40px 0; }
+
+    footer { text-align: center; color: var(--sub); font-size: 0.85rem; padding: 30px 16px; }
+
+    @media (max-width: 600px) {
+      .nav { flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <!-- 스타일 담당이 만든 디자인 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 상단 메뉴 -->
+  <nav class="nav">
+    <a href="index.html" class="logo">ERICA 맛집지도</a>
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="menu.html" class="active">메뉴</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>메뉴</h1>
+    <p class="desc">가게별 대표 메뉴를 모아 봤습니다. 가게 이름이나 메뉴로 검색해 보세요.</p>
+
+    <div class="tools">
+      <input type="search" id="search" placeholder="예: 라멘, 돈카츠, 삼계탕">
+      <div class="filters" id="filters"></div>
+    </div>
+
+    <div class="grid" id="list"></div>
+    <p class="empty" id="empty" hidden>찾는 메뉴가 없습니다.</p>
+  </main>
+
+  <footer>
+    <p>오픈소스개발과 활용 · 한양대학교 ERICA</p>
+  </footer>
+
+  <!-- 맛집 정보는 data.js 한 곳에서 관리합니다 -->
+  <script src="data.js"></script>
+  <script>
+    const listEl = document.getElementById("list");
+    const filtersEl = document.getElementById("filters");
+    const searchEl = document.getElementById("search");
+    const emptyEl = document.getElementById("empty");
+
+    // 첫 페이지에서 종류를 눌러 들어오면 그 종류부터 보여줍니다. (menu.html?category=한식)
+    let currentCategory = new URLSearchParams(location.search).get("category") || "전체";
+
+    function renderFilters() {
+      const categories = ["전체", ...new Set(RESTAURANTS.map((r) => r.category))];
+      filtersEl.innerHTML = "";
+      categories.forEach((cat) => {
+        const btn = document.createElement("button");
+        btn.textContent = cat;
+        if (cat === currentCategory) btn.classList.add("active");
+        btn.addEventListener("click", () => {
+          currentCategory = cat;
+          renderFilters();
+          renderList();
+        });
+        filtersEl.appendChild(btn);
+      });
+    }
+
+    function renderList() {
+      const keyword = searchEl.value.trim();
+      listEl.innerHTML = "";
+
+      const shown = RESTAURANTS.filter((r) => {
+        const okCategory = currentCategory === "전체" || r.category === currentCategory;
+        const okKeyword = keyword === "" || (r.name + r.menu).includes(keyword);
+        return okCategory && okKeyword;
+      });
+
+      shown.forEach((r) => {
+        const menuTags = r.menu.split(",").map((m) => "<span>" + m.trim() + "</span>").join("");
+        const card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML =
+          "<div><span class='badge'>" + r.category + "</span></div>" +
+          "<h2>" + r.name + "</h2>" +
+          "<div class='menus'>" + menuTags + "</div>" +
+          "<p>" + r.comment + "</p>" +
+          "<p class='meta'>" + r.address + "</p>";
+        listEl.appendChild(card);
+      });
+
+      emptyEl.hidden = shown.length > 0;
+    }
+
+    searchEl.addEventListener("input", renderList);
+    renderFilters();
+    renderList();
+  </script>
+</body>
+</html>
