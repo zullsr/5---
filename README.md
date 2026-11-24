@@ -17,9 +17,10 @@
 https://github.com/zullsr/5---
 
 
-## 5. 사용한 오픈소스
+## 5. 사용한 오픈소스 및 도구
 - **네이버 지도 (Naver Map)**: 학교 주변 맛집 위치 및 메뉴·가격 정보 연동
 - **GitHub Pages**: 정적 웹페이지 호스팅 및 배포 (https://pages.github.com/)
+- **생성형 AI (Gemini, Claude)**: 웹페이지 구조 설계, 맛집 데이터(`data.js`) 포맷팅 및 `README.md` 작성 보조
 
 ## 6. 팀원 및 역할
 | 이름 | 역할 | 담당 파일 |
