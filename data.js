@@ -11,7 +11,7 @@ const RESTAURANTS = [
     menu: "돈카츠, 마제소바",
     address: "경기 안산시 상록구 한양대학로 60",
     comment: "정문 맞은편이라 찾기 쉬운 돈카츠·마제소바 전문점",
-    addedBy: "조원1",
+    addedBy: "김지연",
   },
   {
     name: "밀플랜비 한양대에리카점",
@@ -19,7 +19,7 @@ const RESTAURANTS = [
     menu: "부리또",
     address: "경기 안산시 상록구 학사2길 11-1",
     comment: "속이 꽉 찬 큼직한 부리또로 든든한 한 끼",
-    addedBy: "조원1",
+    addedBy: "김지연",
   },
   {
     name: "프로스콘스 에리카점",
@@ -27,7 +27,7 @@ const RESTAURANTS = [
     menu: "치아바타, 커피",
     address: "경기 안산시 상록구 학사2길 12",
     comment: "치아바타로 유명한 베이커리 카페",
-    addedBy: "조원2",
+    addedBy: "김지연",
   },
   {
     name: "상황삼계탕",
@@ -35,7 +35,7 @@ const RESTAURANTS = [
     menu: "삼계탕, 반계탕, 닭칼국수",
     address: "경기 안산시 상록구 성안길 82-3",
     comment: "진한 국물의 삼계탕 전문점 (스타벅스 건물 3층)",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "에비수",
@@ -43,7 +43,7 @@ const RESTAURANTS = [
     menu: "회덮밥, 장어덮밥, 솥밥",
     address: "경기 안산시 상록구 성안길 93",
     comment: "덮밥과 솥밥으로 든든하게 먹기 좋은 일식집",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "알촌 한양대에리카점",
@@ -51,7 +51,7 @@ const RESTAURANTS = [
     menu: "알밥, 오뎅",
     address: "경기 안산시 상록구 학사길 2",
     comment: "저렴하고 빠르게 먹는 알밥 맛집",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "행컵 안산한양대점",
@@ -59,7 +59,7 @@ const RESTAURANTS = [
     menu: "떠먹는삼겹쌈밥, 치킨마요",
     address: "경기 안산시 상록구 성안길 83",
     comment: "간편하게 먹는 컵밥 전문점",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "송탄진대광부대찌개 한양대에리카점",
@@ -67,7 +67,7 @@ const RESTAURANTS = [
     menu: "부대찌개",
     address: "경기 안산시 상록구 학사2길 8",
     comment: "맵고 푸짐한 부대찌개",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
   name: "인더비엣 한양대에리카점",
@@ -75,7 +75,7 @@ const RESTAURANTS = [
     menu: "쌀국수, 팟타이, 반쎄오",
     address: "경기 안산시 상록구 성안길 78-3",
     comment: "베트남 음식을 여러 가지 맛볼 수 있는 곳",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "자이카 안산본점",
@@ -83,7 +83,7 @@ const RESTAURANTS = [
     menu: "커리, 난, 탄두리치킨",
     address: "경기 안산시 상록구 한양대학로 45-1",
     comment: "학교 앞에서 즐기는 인도 요리",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
  
 {
@@ -92,7 +92,7 @@ const RESTAURANTS = [
     menu: "사케동, 가츠동, 규동",
     address: "경기 안산시 상록구 학사2길 14",
     comment: "정문 앞 가성비 좋고 푸짐한 일본식 덮밥 맛집",
-    addedBy: "조원3",
+    addedBy: "김지연",
   },
   {
     name: "청학칡냉면",
@@ -100,7 +100,7 @@ const RESTAURANTS = [
     menu: "물냉면, 비빔냉면, 왕만두",
     address: "경기 안산시 상록구 한양대학로 48",
     comment: "시원한 살얼음 육수와 쫄깃한 칡면의 조화",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "미쳐버린파닭 한양대점",
@@ -108,7 +108,7 @@ const RESTAURANTS = [
     menu: "파닭치킨, 간장치킨, 양념치킨",
     address: "경기 안산시 상록구 학사5길 6",
     comment: "알싸한 파채와 바삭한 치킨을 함께 즐기는 곳",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "코지홀리데이",
@@ -116,7 +116,7 @@ const RESTAURANTS = [
     menu: "아인슈페너, 크로플, 수제케이크",
     address: "경기 안산시 상록구 학사4길 15",
     comment: "아늑하고 감성적인 인테리어의 휴식 카페",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "필링파인",
@@ -124,7 +124,7 @@ const RESTAURANTS = [
     menu: "시그니처 라떼, 스콘, 디저트",
     address: "경기 안산시 상록구 성안길 89",
     comment: "달콤한 구움과자와 커피가 맛있는 분위기 맛집",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "파앤피",
@@ -132,7 +132,7 @@ const RESTAURANTS = [
     menu: "알리오올리오, 크림파스타, 피자",
     address: "경기 안산시 상록구 학사2길 20",
     comment: "파스타와 피자를 부담 없이 즐길 수 있는 양식집",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "일미집 안산한양대점",
@@ -140,7 +140,7 @@ const RESTAURANTS = [
     menu: "감자탕, 뼈해장국",
     address: "경기 안산시 상록구 한양대학로 54",
     comment: "진한 국물과 부드러운 살코기가 일품인 해장국 맛집",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "도스마스 한양대에리카점",
@@ -148,7 +148,7 @@ const RESTAURANTS = [
     menu: "치킨텐더부리또, 비프부리또",
     address: "경기 안산시 상록구 학사2길 9",
     comment: "매운맛 단계 조절 가능한 인기 부리또 전문점",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "버니문",
@@ -156,7 +156,7 @@ const RESTAURANTS = [
     menu: "바닐라빈라떼, 케이크, 에이드",
     address: "경기 안산시 상록구 성안길 85",
     comment: "조용히 과제하거나 친구들과 수다 떨기 좋은 카페",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "동아리식당",
@@ -164,7 +164,7 @@ const RESTAURANTS = [
     menu: "제육볶음, 김치찌개, 순두부찌개",
     address: "경기 안산시 상록구 학사길 10",
     comment: "집밥처럼 든든하고 푸짐하게 나오는 한식 백반집",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "카페마루",
@@ -172,7 +172,7 @@ const RESTAURANTS = [
     menu: "아메리카노, 스무디, 와플",
     address: "경기 안산시 상록구 한양대학로 52",
     comment: "넓은 좌석과 합리적인 가격의 학교 앞 아지트 카페",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "홍당무",
@@ -180,7 +180,7 @@ const RESTAURANTS = [
     menu: "떡볶이, 참치김밥, 라볶이",
     address: "경기 안산시 상록구 학사2길 7",
     comment: "공강 시간에 빠르고 맛있게 즐기는 학교 앞 분식",
-    addedBy: "조원3",
+    addedBy: "김지우",
   },
   {
     name: "대홍훠궈 샤브샤브",
@@ -188,7 +188,7 @@ const RESTAURANTS = [
     menu: "마라훠궈, 소고기샤브샤브, 꿔바로우",
     address: "경기 안산시 상록구 성안길 91",
     comment: "깊고 얼얼한 홍탕과 백탕을 함께 즐기는 정통 훠궈",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "앤의 식탁",
@@ -196,7 +196,7 @@ const RESTAURANTS = [
     menu: "돈까스, 크림파스타, 필라프",
     address: "경기 안산시 상록구 학사4길 8",
     comment: "정갈한 플레이팅과 따뜻한 분위기의 식사 맛집",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "탕화쿵푸마라탕 한양대에리카점",
@@ -204,7 +204,7 @@ const RESTAURANTS = [
     menu: "마라탕, 마라샹궈, 꿔바로우",
     address: "경기 안산시 상록구 한양대학로 56",
     comment: "원하는 재료를 골라 담는 학교 앞 마라탕 성지",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "두루정",
@@ -212,7 +212,7 @@ const RESTAURANTS = [
     menu: "제육두루치기, 오징어두루치기, 된장찌개",
     address: "경기 안산시 상록구 학사길 14",
     comment: "매콤달콤한 양념에 밥 비벼 먹기 좋은 두루치기 맛집",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "오얏리커피",
@@ -220,7 +220,7 @@ const RESTAURANTS = [
     menu: "오얏리슈페너, 콜드브루, 필터커피",
     address: "경기 안산시 상록구 학사4길 11",
     comment: "직접 로스팅한 원두로 깊은 커피 풍미를 내는 카페",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "신디도넛",
@@ -228,7 +228,7 @@ const RESTAURANTS = [
     menu: "우유크림도넛, 로투스도넛, 아메리카노",
     address: "경기 안산시 상록구 성안길 80",
     comment: "부드러운 크림이 가득 들어간 수제 도넛 디저트 맛집",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "새벽다섯시",
@@ -236,7 +236,7 @@ const RESTAURANTS = [
     menu: "수제버거, 감자튀김, 치즈나쵸",
     address: "경기 안산시 상록구 학사5길 10",
     comment: "저녁에 친구들과 가볍게 맥주 한잔하기 좋은 펍",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "남월",
@@ -244,7 +244,7 @@ const RESTAURANTS = [
     menu: "양지쌀국수, 분짜, 짜조",
     address: "경기 안산시 상록구 학사2길 16",
     comment: "진하게 우려낸 고기 육수가 매력적인 쌀국수 전문점",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "코운즈",
@@ -252,7 +252,7 @@ const RESTAURANTS = [
     menu: "플레인스콘, 휘낭시에, 라떼",
     address: "경기 안산시 상록구 학사4길 6",
     comment: "매일 아침 구워내는 바삭촉촉한 스콘 베이커리 카페",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "기찬고기",
@@ -260,7 +260,7 @@ const RESTAURANTS = [
     menu: "숙성삼겹살, 목살, 된장술밥",
     address: "경기 안산시 상록구 성안길 87",
     comment: "학과 모임이나 회식하기 좋은 가성비 고깃집",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
   {
     name: "밀숲 한양대에리카점",
@@ -268,7 +268,7 @@ const RESTAURANTS = [
     menu: "사골칼국수, 얼큰칼국수, 왕만두",
     address: "경기 안산시 상록구 한양대학로 50",
     comment: "진하고 담백한 사골 육수로 속이 든든해지는 칼국수",
-    addedBy: "조원3",
+    addedBy: "한새봄",
   },
 
   
