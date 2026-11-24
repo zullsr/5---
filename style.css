@@ -1,0 +1,375 @@
+
+/* ========================================
+   ERICA 맛집지도 - 공통 디자인
+   스타일 담당
+======================================== */
+
+/* 1. 전체 색상 */
+:root {
+  --main: #104b83;
+  --accent: #ff8148;
+  --bg: #f4f7fc;
+  --card: #ffffff;
+  --text: #202d3d;
+  --sub: #718096;
+  --line: #e4eaf2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a, button, input {
+  transition: all 0.25s ease;
+}
+
+/* 2. 상단 네비게이션 */
+.nav {
+  background: #103f73;
+  padding: 18px max(24px, calc((100% - 1120px) / 2));
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  gap: 16px;
+}
+
+.nav .logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.nav ul {
+  gap: 28px;
+}
+
+.nav a {
+  opacity: 0.85;
+}
+
+.nav a:hover,
+.nav a.active {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.nav ul a {
+  padding: 7px 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav ul a:hover,
+.nav ul a.active {
+  border-bottom-color: var(--accent);
+}
+
+/* 3. 메인 첫 화면 */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #103f73 0%,
+    #155b9b 60%,
+    #287bb8 100%
+  );
+  padding: 95px 20px 105px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.3rem);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.buttons {
+  gap: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+
+/* 4. 본문 공통 */
+main {
+  max-width: 1120px;
+}
+
+section {
+  margin: 60px 0;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+section h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+/* 5. 공통 카드 디자인 */
+.grid {
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(16,63,115,0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16,63,115,0.12);
+  border-color: #b9d2e9;
+}
+
+.card h3,
+.card h2 {
+  color: #203b5c;
+}
+
+.card p {
+  line-height: 1.7;
+}
+
+.card .icon {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+}
+
+.count {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* 6. 메뉴 페이지 제목 */
+main > h1 {
+  color: var(--main);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 18px;
+}
+
+.desc {
+  color: var(--sub);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* 7. 검색창 */
+#search {
+  background: white;
+  border: 1px solid #dce5ef;
+  border-radius: 14px;
+  padding: 15px 18px;
+  font-family: inherit;
+  box-shadow: 0 3px 12px rgba(16,63,115,0.04);
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--main);
+  box-shadow: 0 0 0 4px rgba(16,75,131,0.1);
+}
+
+#search::placeholder {
+  color: #9aa8b7;
+}
+
+/* 8. 음식 종류 필터 버튼 */
+.filters {
+  gap: 10px;
+}
+
+.filters button {
+  background: white;
+  border: 1px solid #dfe6ee;
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-weight: 600;
+  color: #536478;
+}
+
+.filters button:hover {
+  background: #eaf2fa;
+  border-color: #9bbfdf;
+  color: var(--main);
+}
+
+.filters button.active,
+.filters button.active:hover {
+  background: var(--main);
+  border-color: var(--main);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16,75,131,0.2);
+}
+
+/* 9. 음식 메뉴 카드 */
+#list .card {
+  padding: 24px;
+  gap: 12px;
+}
+
+#list .card h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.badge {
+  background: #fff0e7;
+  color: #e76b32;
+  border-radius: 30px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+}
+
+.menus {
+  gap: 8px;
+}
+
+.menus span {
+  background: #edf4fc;
+  color: #18558c;
+  border-radius: 8px;
+  padding: 5px 12px;
+}
+
+.meta {
+  color: #8895a5;
+}
+
+.card .link {
+  display: inline-block;
+  color: var(--main);
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.card .link:hover {
+  color: var(--accent);
+}
+
+/* 10. 결과가 없을 때 */
+.empty:not([hidden]) {
+  background: white;
+  border: 1px dashed #ccd8e5;
+  border-radius: 16px;
+  padding: 48px 20px;
+  margin-top: 20px;
+}
+
+/* 11. 하단 푸터 */
+footer {
+  background: #eaf0f7;
+  color: #738397;
+  padding: 32px 16px;
+  margin-top: 60px;
+  border-top: 1px solid #dce5ef;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 12. 스마트폰 반응형 */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    padding: 18px 12px;
+    gap: 12px;
+  }
+
+  .nav ul {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 65px 18px 75px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  section {
+    margin: 42px 0;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  #list .card {
+    padding: 20px;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+
+  .filters button {
+    padding: 8px 13px;
+  }
+}
+
+/* 움직임 최소화 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
+
