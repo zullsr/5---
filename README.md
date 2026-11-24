@@ -13,7 +13,7 @@
 ![첫 화면](images/screen1.png)
 
 ## 4. 실행 방법 (배포 주소)
-https://zullsr.github.io/5---/
+[https://zullsr.github.io/5---/](https://github.com/zullsr/5---)
 
 ## 5. 사용한 오픈소스
 - **Leaflet.js**: 웹 페이지 내 인터랙티브 지도 구현 (https://leafletjs.com/)
