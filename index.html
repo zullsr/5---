@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERICA 맛집지도</title>
+  <style>
+    :root {
+      --main: #0e4a84;
+      --accent: #ff7a3d;
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1f2933;
+      --sub: #6b7785;
+      --line: #e3e7ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* 상단 메뉴 */
+    .nav {
+      background: var(--main);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+    }
+    .nav .logo { font-weight: 800; font-size: 1.1rem; }
+    .nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
+    .nav a { opacity: 0.8; }
+    .nav a:hover, .nav a.active { opacity: 1; font-weight: 700; }
+
+    /* 첫 화면 */
+    .hero {
+      background: linear-gradient(135deg, var(--main), #1b6bb5);
+      color: #fff;
+      text-align: center;
+      padding: 70px 16px 80px;
+    }
+    .hero h1 { font-size: 2.4rem; margin: 0 0 10px; }
+    .hero p { font-size: 1.05rem; opacity: 0.9; margin: 0 0 28px; }
+    .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid #fff;
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); }
+    .btn:hover { opacity: 0.9; }
+
+    main { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+    section { margin: 48px 0; }
+    h2 { font-size: 1.4rem; margin: 0 0 16px; }
+
+    /* 카드 공통 */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card .icon { font-size: 1.8rem; }
+    .card h3 { margin: 6px 0 4px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--sub); font-size: 0.92rem; }
+    a.card:hover { border-color: var(--main); }
+
+    .count { color: var(--accent); font-weight: 800; }
+
+    footer { text-align: center; color: var(--sub); font-size: 0.85rem; padding: 30px 16px; }
+
+    @media (max-width: 600px) {
+      .nav { flex-direction: column; gap: 8px; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 상단 메뉴 -->
+  <nav class="nav">
+    <a href="index.html" class="logo">ERICA 맛집지도</a>
+    <ul>
+      <li><a href="index.html" class="active">홈</a></li>
+      <li><a href="map.html">맛집지도</a></li>
+      <li><a href="menu.html">메뉴</a></li>
+    </ul>
+  </nav>
+
+  <!-- 첫 화면 -->
+  <header class="hero">
+    <h1>오늘 뭐 먹지?</h1>
+    <p>한양대학교 ERICA 캠퍼스 주변 맛집을 지도와 메뉴로 한눈에</p>
+    <div class="buttons">
+      <a href="map.html" class="btn primary">맛집지도 보기</a>
+      <a href="menu.html" class="btn">메뉴 보기</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 소개 -->
+    <section>
+      <h2>이런 걸 할 수 있어요</h2>
+      <div class="grid">
+        <a href="map.html" class="card">
+          <div class="icon">🗺️</div>
+          <h3>지도에서 찾기</h3>
+          <p>학교 주변 맛집 위치를 네이버 지도에서 확인합니다.</p>
+        </a>
+        <a href="menu.html" class="card">
+          <div class="icon">🍽️</div>
+          <h3>메뉴 살펴보기</h3>
+          <p>가게별 대표 메뉴와 한 줄 소개를 모아 봅니다.</p>
+        </a>
+        <div class="card">
+          <div class="icon">⭐</div>
+          <h3>조원 추천</h3>
+          <p>우리 조가 직접 고른 맛집만 소개합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 음식 종류별 개수 (data.js에서 자동 계산) -->
+    <section>
+      <h2>지금까지 등록된 맛집 <span class="count" id="total"></span></h2>
+      <div class="grid" id="categories"></div>
+    </section>
+
+    <!-- 조원 소개 -->
+    <section>
+      <h2>만든 사람</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>조원1</h3>
+          <p>스타일 담당</p>
+        </div>
+        <div class="card">
+          <h3>조원2</h3>
+          <p>리드미 담당</p>
+        </div>
+        <div class="card">
+          <h3>조원3</h3>
+          <p>맛집지도 등록 담당</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>오픈소스개발과 활용 · 한양대학교 ERICA</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    // 음식 종류별로 맛집 개수를 세어 카드로 보여줍니다.
+    const counts = {};
+    RESTAURANTS.forEach((r) => {
+      counts[r.category] = (counts[r.category] || 0) + 1;
+    });
+
+    document.getElementById("total").textContent = RESTAURANTS.length + "곳";
+
+    const box = document.getElementById("categories");
+    Object.keys(counts).forEach((cat) => {
+      const a = document.createElement("a");
+      a.className = "card";
+      a.href = "menu.html?category=" + encodeURIComponent(cat);
+      a.innerHTML = "<h3>" + cat + "</h3><p><span class='count'>" + counts[cat] + "곳</span> 보러 가기 →</p>";
+      box.appendChild(a);
+    });
+  </script>
+</body>
+</html>
