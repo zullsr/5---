@@ -11,7 +11,8 @@
 - **반응형 카드 UI 디자인 (`style.css`)**: 직관적인 카드 레이아웃 및 카테고리 배지 스타일링 적용
 
 ## 3. 실행 화면
-![첫 화면](images/screen1.png)
+![첫 화면] <img width="2752" height="1538" alt="스크린샷 2026-11-24 102536" src="https://github.com/user-attachments/assets/8aafd41b-7c65-475c-a3e6-77c7d0214f89" />
+
 
 ## 4. 실행 방법 (배포 주소)
 https://github.com/zullsr/5---
