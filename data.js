@@ -78,4 +78,27 @@ const RESTAURANTS = [
     addedBy: "조원3",
   },
   {
-    name: "인더비엣
+  name: "인더비엣 한양대에리카점",
+    category: "아시안",
+    menu: "쌀국수, 팟타이, 반쎄오",
+    address: "경기 안산시 상록구 성안길 78-3",
+    comment: "베트남 음식을 여러 가지 맛볼 수 있는 곳",
+    addedBy: "조원3",
+  },
+  {
+    name: "자이카 안산본점",
+    category: "아시안",
+    menu: "커리, 난, 탄두리치킨",
+    address: "경기 안산시 상록구 한양대학로 45-1",
+    comment: "학교 앞에서 즐기는 인도 요리",
+    addedBy: "조원3",
+  },
+  {
+    name: "투파인드피터 한양대에리카점",
+    category: "양식",
+    menu: "파스타, 리조또, 스테이크",
+    address: "경기 안산시 상록구 성안길 97",
+    comment: "분위기 좋은 양식당, 기념일 식사로 추천",
+    addedBy: "조원3",
+  },
+];
