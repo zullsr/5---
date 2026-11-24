@@ -76,6 +76,10 @@
 
     .count { color: var(--accent); font-weight: 800; }
 
+    /* 조원 추천 카드 */
+    .pick .who { color: var(--accent); font-weight: 800; font-size: 0.85rem; }
+    .pick .menu { color: var(--main); font-weight: 600; font-size: 0.9rem; margin-top: 4px; }
+
     footer { text-align: center; color: var(--sub); font-size: 0.85rem; padding: 30px 16px; }
 
     @media (max-width: 600px) {
@@ -115,12 +119,18 @@
           <h3>메뉴 살펴보기</h3>
           <p>가게별 대표 메뉴와 한 줄 소개를 모아 봅니다.</p>
         </a>
-        <div class="card">
+        <a href="#picks" class="card">
           <div class="icon">⭐</div>
           <h3>조원 추천</h3>
-          <p>우리 조가 직접 고른 맛집만 소개합니다.</p>
-        </div>
+          <p>조원들이 한 곳씩 골라 추천하는 맛집을 소개합니다.</p>
+        </a>
       </div>
+    </section>
+
+    <!-- 조원 추천 맛집 (data.js의 recommend를 보고 자동으로 만듭니다) -->
+    <section id="picks">
+      <h2>조원 추천 맛집</h2>
+      <div class="grid" id="pick-list"></div>
     </section>
 
     <!-- 음식 종류별 개수 (data.js에서 자동 계산) -->
@@ -134,15 +144,15 @@
       <h2>만든 사람</h2>
       <div class="grid">
         <div class="card">
-          <h3>조원1</h3>
+          <h3>김지연</h3>
           <p>스타일 담당</p>
         </div>
         <div class="card">
-          <h3>조원2</h3>
+          <h3>한새봄</h3>
           <p>리드미 담당</p>
         </div>
         <div class="card">
-          <h3>조원3</h3>
+          <h3>김지우</h3>
           <p>맛집지도 등록 담당</p>
         </div>
       </div>
@@ -171,6 +181,24 @@
       a.innerHTML = "<h3>" + cat + "</h3><p><span class='count'>" + counts[cat] + "곳</span> 보러 가기 →</p>";
       box.appendChild(a);
     });
+
+    // 조원 추천 맛집을 카드로 보여줍니다. (아래 순서대로 나옵니다)
+    const MEMBERS = ["김지연", "한새봄", "김지우"];
+    const pickBox = document.getElementById("pick-list");
+    RESTAURANTS
+      .filter((r) => r.recommend)
+      .sort((a, b) => MEMBERS.indexOf(a.recommend) - MEMBERS.indexOf(b.recommend))
+      .forEach((r) => {
+        const a = document.createElement("a");
+        a.className = "card pick";
+        a.href = "menu.html?category=" + encodeURIComponent(r.category);
+        a.innerHTML =
+          "<span class='who'>⭐ " + r.recommend + "의 추천</span>" +
+          "<h3>" + r.name + "</h3>" +
+          "<p>" + r.comment + "</p>" +
+          "<p class='menu'>" + r.menu + "</p>";
+        pickBox.appendChild(a);
+      });
   </script>
 </body>
 </html>
