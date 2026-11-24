@@ -22,14 +22,6 @@ const RESTAURANTS = [
     addedBy: "조원1",
   },
   {
-    name: "오빈라멘 한양대에리카점",
-    category: "일식",
-    menu: "라멘",
-    address: "경기 안산시 상록구 학사5길 2",
-    comment: "혼밥하기 좋은 라멘집",
-    addedBy: "조원2",
-  },
-  {
     name: "프로스콘스 에리카점",
     category: "카페",
     menu: "치아바타, 커피",
@@ -93,12 +85,5 @@ const RESTAURANTS = [
     comment: "학교 앞에서 즐기는 인도 요리",
     addedBy: "조원3",
   },
-  {
-    name: "투파인드피터 한양대에리카점",
-    category: "양식",
-    menu: "파스타, 리조또, 스테이크",
-    address: "경기 안산시 상록구 성안길 97",
-    comment: "분위기 좋은 양식당, 기념일 식사로 추천",
-    addedBy: "조원3",
-  },
+ 
 ];
