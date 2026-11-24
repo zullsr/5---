@@ -93,6 +93,7 @@ const RESTAURANTS = [
     address: "경기 안산시 상록구 학사2길 14",
     comment: "정문 앞 가성비 좋고 푸짐한 일본식 덮밥 맛집",
     addedBy: "김지연",
+    recommend: "김지연",
   },
   {
     name: "청학칡냉면",
@@ -109,6 +110,7 @@ const RESTAURANTS = [
     address: "경기 안산시 상록구 학사5길 6",
     comment: "알싸한 파채와 바삭한 치킨을 함께 즐기는 곳",
     addedBy: "김지우",
+    recommend: "김지우",
   },
   {
     name: "코지홀리데이",
@@ -133,6 +135,7 @@ const RESTAURANTS = [
     address: "경기 안산시 상록구 학사2길 20",
     comment: "파스타와 피자를 부담 없이 즐길 수 있는 양식집",
     addedBy: "김지우",
+    recommend: "한새봄",
   },
   {
     name: "일미집 안산한양대점",
