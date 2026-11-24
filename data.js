@@ -8,7 +8,7 @@ const RESTAURANTS = [
   {
     name: "백소정 안산한양대점",
     category: "일식",
-    menu: "돈카츠, 마제소바",
+    menu: "돈카츠, 마제소바, 라멘",
     address: "경기 안산시 상록구 한양대학로 60",
     comment: "정문 맞은편이라 찾기 쉬운 돈카츠·마제소바 전문점",
     addedBy: "김지연",
@@ -48,7 +48,7 @@ const RESTAURANTS = [
   {
     name: "알촌 한양대에리카점",
     category: "한식",
-    menu: "알밥, 오뎅",
+    menu: "알밥, 덮밥",
     address: "경기 안산시 상록구 학사길 2",
     comment: "저렴하고 빠르게 먹는 알밥 맛집",
     addedBy: "김지연",
@@ -89,7 +89,7 @@ const RESTAURANTS = [
 {
     name: "유메식당",
     category: "일식",
-    menu: "사케동, 가츠동, 규동",
+    menu: "사케동, 가츠동, 규동, 라멘",
     address: "경기 안산시 상록구 학사2길 14",
     comment: "정문 앞 가성비 좋고 푸짐한 일본식 덮밥 맛집",
     addedBy: "김지연",
@@ -131,7 +131,7 @@ const RESTAURANTS = [
   {
     name: "파앤피",
     category: "양식",
-    menu: "알리오올리오, 크림파스타, 피자",
+    menu: "파스타, 리조또, 피자",
     address: "경기 안산시 상록구 학사2길 20",
     comment: "파스타와 피자를 부담 없이 즐길 수 있는 양식집",
     addedBy: "김지우",
@@ -148,7 +148,7 @@ const RESTAURANTS = [
   {
     name: "도스마스 한양대에리카점",
     category: "멕시칸",
-    menu: "치킨텐더부리또, 비프부리또",
+    menu: "치킨텐더부리또, 비프부리또, 부리또",
     address: "경기 안산시 상록구 학사2길 9",
     comment: "매운맛 단계 조절 가능한 인기 부리또 전문점",
     addedBy: "김지우",
