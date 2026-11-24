@@ -14,7 +14,8 @@
 ![첫 화면](images/screen1.png)
 
 ## 4. 실행 방법 (배포 주소)
-file:///C:/Users/%EA%B9%80%EC%A7%80%EC%9A%B0/OneDrive/team/5---/index.html/
+https://github.com/zullsr/5---
+
 
 ## 5. 사용한 오픈소스
 - **네이버 지도 (Naver Map)**: 학교 주변 맛집 위치 및 메뉴·가격 정보 연동
